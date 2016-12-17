@@ -26,6 +26,6 @@ class LyricsFactory
     end
   end
 end
-dicts = %w(aoitori do-dai relations).map { |e| read_dict(e) }
+dicts = ARGV.map { |e| read_dict(e) }
 words = LyricsFactory.create(*dicts)
 puts words.join(" ")

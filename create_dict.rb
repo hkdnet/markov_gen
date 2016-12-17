@@ -18,7 +18,7 @@ normalize(name)
 
 `
   rm -f source/#{name}.parsed.txt;
-  mecab -d /usr/local/lib/mecab/dic/mecab-ipadic-neologd < source/#{name}.txt > source/#{name}.parsed.txt
+  mecab -d $(mecab-config --dicdir)/mecab-ipadic-neologd < source/#{name}.txt > source/#{name}.parsed.txt
 `
 
 class DictionaryFactory

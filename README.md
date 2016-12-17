@@ -1,6 +1,6 @@
 ## Usage
 
-Add a lyric as `lyrics/NAME.txt`.
+Add a lyric as `source/NAME.txt`.
 
 ```
 $ ruby create_dict.rb NAME1

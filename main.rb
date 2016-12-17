@@ -1,9 +1,9 @@
 def read_dict(name)
-  txt = File.read("lyrics/#{name}.dict")
+  txt = File.read("source/#{name}.dict")
   txt.split("\n").map { |e| e.split(",") }
 end
 
-class LyricsFactory
+class TextFactory
   class << self
     def create(*dicts)
       n = dicts.sample.first
@@ -27,5 +27,5 @@ class LyricsFactory
   end
 end
 dicts = ARGV.map { |e| read_dict(e) }
-words = LyricsFactory.create(*dicts)
+words = TextFactory.create(*dicts)
 puts words.join(" ")
